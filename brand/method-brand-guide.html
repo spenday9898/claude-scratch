@@ -113,7 +113,7 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
   <div class="bh">
     <div class="logo" aria-hidden="true"></div>
     <div class="t"><div class="eb">Progressive Westman</div><div class="ti">Method Brand Guide</div></div>
-    <div class="tag">Draft v1 · for approval</div>
+    <div class="tag">Draft v2 · for approval</div>
   </div>
 </div>
 
@@ -127,7 +127,7 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
   <div class="card"><div class="lbl">Green</div><h4>Two greens, each with one job</h4><p><b>#7AC043</b> is used only for lines (the header rule, band rule and tile top). <b>#007B4A</b> is used only for button fills and "good" status. White text on #7AC043 is about 2.2:1, which is unreadable on a button. Website green #54B435 stays off Method screens.</p></div>
   <div class="card"><div class="lbl">Button size</div><h4>One action size: Regular 14px</h4><p>Large (15.75) and XLarge (19.25) are retired. XSmall (10.5) is allowed only for filter chips and inline toggles, never for a main action.</p></div>
   <div class="card"><div class="lbl">Back</div><h4>One Back: silver pill, top left</h4><p>It sits in the action row under the header, not beside it. That alone fixes the "offset header" on Invoice, Estimate and Field Crew lists.</p></div>
-  <div class="card"><div class="lbl">Save</div><h4>Save is always a button</h4><p>Where Save is a blue text link (Invoice, Estimate, PO), hide the link and add a black SAVE pill wired to the same Save action. The audit already lists this as the approved fix.</p></div>
+  <div class="card"><div class="lbl">Parked</div><h4>Method's blue buttons stay for now</h4><p>Save &amp; Back, the blue Save link, Add lines and Inactivate Selected are left as they are. Staff will confirm which of those actions they actually use, and replacing them gets decided after that.</p></div>
   <div class="card"><div class="lbl">Method blue</div><h4>Never on purpose</h4><p>#0D71C8 stays only where Method draws it and we can't change it: split buttons, grid links, checkboxes and search. Never use it in a control we build.</p></div>
 </div>
 
@@ -205,7 +205,7 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
 
 <h3>Buttons</h3>
 <div class="spec">
-  <div class="btnrow"><div><span class="b k">Save</span></div><p><b>Primary · black.</b> The one main action on the screen. Rightmost in the action row.</p></div>
+  <div class="btnrow"><div><span class="b k">Print invoice</span></div><p><b>Primary · black.</b> The one main action on the screen. Rightmost in the action row.</p></div>
   <div class="btnrow"><div><span class="b g">New invoice</span></div><p><b>Create · green.</b> Anything that starts a new record: New, Add, Start.</p></div>
   <div class="btnrow"><div><span class="b s">Back</span></div><p><b>Secondary · silver.</b> Back, navigation to related screens, reports, statements.</p></div>
   <div class="btnrow"><div><span class="b u">Refresh</span></div><p><b>Utility · gunmetal.</b> Refresh, print, Residential/Commercial-style mode toggles.</p></div>
@@ -218,7 +218,7 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
 <p>Directly under the header. BACK on the left, then the actions on the right in this order: secondary, utility, create, primary. On a phone the row wraps and stays left-aligned.</p>
 <div class="mock">
   <div class="bh"><div class="logo" aria-hidden="true"></div><div class="t"><div class="eb">Progressive Westman</div><div class="ti">Invoice 339387</div></div><div class="tag">Billing</div></div>
-  <div class="actions"><span class="b s">Back</span><span class="sp"></span><span class="b s">Customer statements</span><span class="b u">Print</span><span class="b g">New invoice</span><span class="b k">Save</span></div>
+  <div class="actions"><span class="b s">Back</span><span class="sp"></span><span class="b s">Customer statements</span><span class="b u">Print</span><span class="b g">New invoice</span><span class="b k">Print invoice</span></div>
   <div class="band">Customer &amp; site</div>
   <div class="tiles">
     <div class="tile"><div class="l">Balance due</div><div class="v">$5.10</div></div>
@@ -244,8 +244,7 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
   <div class="card"><div class="lbl">Do</div><ul>
     <li>Copy the header and band HTML exactly. Change only the title and tag.</li>
     <li>Use CAPS on every button we build.</li>
-    <li>Hide a stock control that clashes and add a branded button wired to the same action.</li>
-    <li>Check 1280, 820 and 390 before you save the screen.</li>
+        <li>Check 1280, 820 and 390 before you save the screen.</li>
   </ul></div>
   <div class="card no"><div class="lbl">Don't</div><ul>
     <li>Use Method blue, #54B435, #FDBC32 or #1A1A1A in anything new.</li>
@@ -262,12 +261,12 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
 <div class="tbl"><table>
 <thead><tr><th>#</th><th>Screen</th><th>Tier</th><th>What changes (looks only)</th></tr></thead>
 <tbody>
-<tr><td class="n">1</td><td>Invoices · Invoice Interface</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. Blue Save link becomes a black SAVE pill. Tablet: split the 7-field row so labels stop overlapping. Mobile: Balance Due no longer clipped.</td></tr>
+<tr><td class="n">1</td><td>Invoices · Invoice Interface</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. Tablet: split the 7-field row so labels stop overlapping. Mobile: Balance Due no longer clipped.</td></tr>
 <tr><td class="n">2</td><td>Work Orders · Edit Work Order</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. BACK into the action row. Thin 26px title becomes Record title. Tablet: Invoice To and Assigned To kept clear of the activity rail. FOR DELIVERY / PICKUP as XSmall gunmetal chips.</td></tr>
 <tr><td class="n">3</td><td>Work Orders · List</td><td><span class="tier t1">Tier 1</span></td><td>Tablet: remove the ~450px gap left by the hidden Quick Views. REPORTS goes from XSmall to Regular silver. Fewer grid columns at 820.</td></tr>
 <tr><td class="n">4</td><td>Invoices · List</td><td><span class="tier t1">Tier 1</span></td><td>BACK moves under the header, so the header goes full width. Amount and Balance headers no longer truncated. Mobile column set: Invoice #, Customer, Balance.</td></tr>
 <tr><td class="n">5</td><td>Field Crew · Work Order List</td><td><span class="tier t1">Tier 1</span></td><td>BACK under the header. REFRESH no longer clipped at 1280. ALL WORK ORDERS and REFRESH on one row.</td></tr>
-<tr><td class="n">6</td><td>Estimates · Edit Estimate</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. Save link becomes a SAVE pill (fixes "Sav/e" on phone). FEE WAIVERS band goes full width. Tablet Amount column no longer clipped.</td></tr>
+<tr><td class="n">6</td><td>Estimates · Edit Estimate</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. FEE WAIVERS band goes full width. Tablet Amount column no longer clipped.</td></tr>
 <tr><td class="n">7</td><td>Field Crew · View Work Order</td><td><span class="tier t1">Tier 1</span></td><td>Content uses the full width, not a ~450px column. CUSTOMER &amp; SITE caption left-aligned. Outcome buttons Regular and equal height. <span class="flag">Your login sees a DRAFT. The fix goes into that draft and drivers won't see it until you publish it.</span></td></tr>
 <tr><td class="n">8</td><td>Floor &amp; Carpet · Carpet Job + Carpet Jobs</td><td><span class="tier t2">Tier 2</span></td><td>STEP bands full width. Header full width. Same rail-clipping fix as WO edit. Mobile: BACK present, NEW CARPET JOB in the action row.</td></tr>
 <tr><td class="n">9</td><td>Contacts · List</td><td><span class="tier t2">Tier 2</span></td><td>BACK and SHOW INACTIVE move under the header, which stops it squeezing on the phone. Mobile column set: Name, Main contact, Balance.</td></tr>
@@ -277,10 +276,11 @@ pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.
 <tr><td class="n">13</td><td>Floor &amp; Carpet · Board</td><td><span class="tier t2">Tier 2</span></td><td>Reference screen. Only change: 8px gap between the nav bars so they stop touching.</td></tr>
 <tr><td class="n">14</td><td>Contacts · Account Briefing</td><td><span class="tier t2">Tier 2</span></td><td>Reference screen. Shorten the one band caption that wraps on the phone.</td></tr>
 <tr><td class="n">15</td><td>Contacts · View Customer</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Mobile: close the dead gap above Portal Link.</td></tr>
-<tr><td class="n">16</td><td>Items · List + Inventory Part</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Untruncate Type / QOH / Price. Blue "Inactivate Selected" becomes a black pill. Mobile column set.</td></tr>
-<tr><td class="n">17</td><td>Purchase Orders · List + Edit</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Save link becomes a pill. Blue "Add lines" outline becomes a silver pill. Tablet totals box no longer clipped.</td></tr>
+<tr><td class="n">16</td><td>Items · List + Inventory Part</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Untruncate Type / QOH / Price. Mobile column set.</td></tr>
+<tr><td class="n">17</td><td>Purchase Orders · List + Edit</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Tablet totals box no longer clipped.</td></tr>
 <tr><td class="n">18</td><td>Activities · Home</td><td><span class="tier t3">Tier 3</span></td><td>Add the header if the designer allows it on this new-style app. Mobile BACK.</td></tr>
 <tr><td class="n">19</td><td>Home dashboard + 16 other stock apps</td><td><span class="tier t4">Tier 4</span></td><td>Header only, where the designer allows it: Website Links, Staff Picks, Proposals, Jobs, Send Email, Classes, Accounts, Opportunities, Terms, Sales Reps, Web to Lead, Time Tracking, Sales Orders, Bills, Price Rules, Tax Split, Email Campaigns. Staff Picks and Price Rules: last column clipped on phone.</td></tr>
+<tr><td class="n">—</td><td>Method blue buttons</td><td><span class="tier t4">Parked</span></td><td><span class="flag">Save &amp; Back, the Save link (Invoice, Estimate, PO, which wraps to "Sav/e" on a phone), Add lines, Inactivate Selected and the Add buttons on stock apps. Waiting on staff to say which actions they actually use.</span></td></tr>
 <tr><td class="n">—</td><td>Customer Portal Chat</td><td><span class="tier t4">Your call</span></td><td><span class="flag">It's blank at every size. Hiding the tile or fixing it is a functional decision, so it's left for you.</span></td></tr>
 <tr><td class="n">—</td><td>Payments · Sales Receipts</td><td><span class="tier t4">Excluded</span></td><td>Not touched, per your rule.</td></tr>
 </tbody></table></div>
