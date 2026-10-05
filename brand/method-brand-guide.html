@@ -1,0 +1,298 @@
+<title>Method Brand Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=Source+Code+Pro:wght@400&display=swap">
+<style>
+/* Layout: the brand header itself opens the page; one column of numbered rule sections, specimens drawn in real Method sizes */
+:root{
+  --bg:#F4F6F2;--surface:#FFFFFF;--fg:#1D2119;--muted:#5F6B57;--line:#D9DED3;--soft:#EBEFE7;
+  --band:#191C16;--rule:#7AC043;--action:#007B4A;--gold:#FDCB2E;--bad:#DA211E;
+  --display:"Barlow Semi Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Source Sans 3","Source Sans Pro",system-ui,-apple-system,sans-serif;
+  --mono:"Source Code Pro",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121410;--surface:#1B1F18;--fg:#E7EBE2;--muted:#A3AE99;--line:#2E3429;--soft:#232820;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121410;--surface:#1B1F18;--fg:#E7EBE2;--muted:#A3AE99;--line:#2E3429;--soft:#232820;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.5 var(--body);padding-inline:16px;padding-block:0 56px}
+.wrap{max-width:1040px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rule);outline-offset:2px}
+
+/* Brand header (real spec) */
+.bh{background:#191C16;border-bottom:4px solid #7AC043;display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;color:#fff;font-family:var(--body)}
+.bh .logo{width:36px;height:36px;border-radius:50%;background:#191C16;border:2px solid #7AC043;display:grid;place-items:center;flex:none}
+.bh .logo::after{content:"";border-left:11px solid #7AC043;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.bh .t{flex:1;min-width:0}
+.bh .eb{color:#B9C4AE;font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase}
+.bh .ti{font-size:20px;font-weight:600;line-height:1.2}
+.bh .tag{color:#FDCB2E;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.top{margin-inline:-16px}
+.top .bh{padding:18px max(16px,calc((100% - 1040px)/2))}
+.top .ti{font:700 28px/1.1 var(--display);letter-spacing:.2px}
+
+.lede{max-width:66ch;margin:24px 0 8px;font-size:17px}
+.meta{color:var(--muted);font-size:13px;margin:0 0 8px}
+
+h2{font:700 12px var(--body);letter-spacing:1.4px;text-transform:uppercase;background:#191C16;color:#fff;border-left:4px solid #7AC043;padding:9px 12px;margin:40px 0 16px}
+h3{font:700 18px/1.25 var(--display);letter-spacing:.2px;margin:24px 0 8px;text-wrap:balance}
+p,li{max-width:68ch}
+.muted{color:var(--muted)}
+small,.cap{font-size:13px;color:var(--muted)}
+.lbl{font:700 10px var(--body);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+code,.mono{font-family:var(--mono);font-size:13px}
+
+/* Decisions */
+.dec{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.card{background:var(--surface);border:.8px solid var(--line);border-top:3px solid #7AC043;padding:14px 16px;min-width:0}
+.card h4{margin:4px 0 6px;font:600 16px var(--body)}
+.card p{margin:0;font-size:14.5px}
+
+/* Swatches */
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.s{background:var(--surface);border:.8px solid var(--line);min-width:0}
+.s i{display:block;height:56px;border-bottom:.8px solid var(--line)}
+.s div{padding:8px 10px}
+.s b{display:block;font-size:13.5px}
+.s span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.s em{display:block;font-style:normal;font-size:12px;color:var(--muted);margin-top:2px}
+.s.x{opacity:.62}
+.s.x b{text-decoration:line-through}
+
+/* Tables */
+.tbl{overflow-x:auto;border:.8px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th,td{text-align:left;padding:8px 12px;border-bottom:.8px solid var(--line);vertical-align:top}
+th{font:700 10px var(--body);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Buttons (real spec) */
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.b{font:600 14px var(--body);text-transform:uppercase;padding:7px 15px;border-radius:999px;border:.8px solid;line-height:1.2;white-space:nowrap}
+.b.k{background:#000;color:#fff;border-color:#000}
+.b.g{background:#007B4A;color:#fff;border-color:#007B4A}
+.b.s{background:#EEF5F7;color:#2A394A;border-color:#EEF5F7}
+.b.u{background:#545F67;color:#fff;border-color:#545F67}
+.b.y{background:#FDCB2E;color:#000;border-color:#FDCB2E}
+.b.xs{font-size:10.5px;padding:5px 11px}
+.b.o{background:#fff;color:#000;border-color:#545F67}
+.spec{background:var(--surface);border:.8px solid var(--line);padding:16px;display:grid;gap:12px;min-width:0}
+.btnrow{display:grid;grid-template-columns:150px 1fr;gap:6px 16px;align-items:center}
+.btnrow p{margin:0;font-size:14px}
+@media (max-width:560px){.btnrow{grid-template-columns:1fr}}
+
+/* Mock screen */
+.mock{background:#fff;border:.8px solid var(--line);color:#0F1B31;padding:14px;display:grid;gap:12px;font-family:var(--body)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.actions .sp{flex:1}
+.band{background:#191C16;color:#fff;border-left:4px solid #7AC043;font:700 11px var(--body);letter-spacing:1.2px;text-transform:uppercase;padding:8px 12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.tile{background:#fff;border:.8px solid #D9DED3;border-top:3px solid #7AC043;padding:10px 12px}
+.tile .l{font:700 10px var(--body);letter-spacing:1.2px;text-transform:uppercase;color:#5F6B57}
+.tile .v{font:600 22px var(--body);color:#0F1B31;font-variant-numeric:tabular-nums}
+
+pre{background:#191C16;color:#E7EBE2;padding:14px;overflow-x:auto;font:12.5px/1.55 var(--mono);margin:8px 0 0;border-left:4px solid #7AC043}
+.copy{font:600 12px var(--body);text-transform:uppercase;letter-spacing:.6px;padding:6px 13px;border-radius:999px;border:.8px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+
+/* Do / don't */
+.dd{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.dd ul{margin:6px 0 0;padding-left:18px;font-size:14.5px}
+.dd .card.no{border-top-color:#DA211E}
+
+/* Rank */
+.tier{display:inline-block;font:700 10px var(--body);letter-spacing:1px;text-transform:uppercase;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.t1{background:#000;color:#fff}.t2{background:#007B4A;color:#fff}.t3{background:#EEF5F7;color:#2A394A}.t4{background:var(--soft);color:var(--muted);border:.8px solid var(--line)}
+.flag{color:#B5541C;font-weight:600}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .flag{color:#F0A36B}}
+:root[data-theme="dark"] .flag{color:#F0A36B}
+.vp{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.vp .card .w{font:700 26px var(--display);font-variant-numeric:tabular-nums}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="top">
+  <div class="bh">
+    <div class="logo" aria-hidden="true"></div>
+    <div class="t"><div class="eb">Progressive Westman</div><div class="ti">Method Brand Guide</div></div>
+    <div class="tag">Draft v1 · for approval</div>
+  </div>
+</div>
+
+<main class="wrap">
+<p class="lede">One set of rules for every Method screen staff use. The black header and green rule already on Account Briefing, Carpet Care Board and Simple Proposal is the brand. This guide writes those screens down as rules, settles the leftover conflicts, and ranks the screens that need to catch up.</p>
+<p class="meta">Built from the Oct 4–5 2026 audit: 42 screens, 30 apps, 127 captures at 1280 / 820 / 390. Looks only. No functional or structural changes. Payments and Sales Receipts are off limits.</p>
+
+<h2>1 · Decisions this guide makes</h2>
+<div class="dec">
+  <div class="card"><div class="lbl">Yellow</div><h4>One yellow: #FDCB2E</h4><p>The header tag moves from #FDBC32 to #FDCB2E. The yellow buttons are Method's preset colour and are likely locked. The tag is our own HTML, so it's a one-value edit on each header.</p></div>
+  <div class="card"><div class="lbl">Green</div><h4>Two greens, each with one job</h4><p><b>#7AC043</b> is used only for lines (the header rule, band rule and tile top). <b>#007B4A</b> is used only for button fills and "good" status. White text on #7AC043 is about 2.2:1, which is unreadable on a button. Website green #54B435 stays off Method screens.</p></div>
+  <div class="card"><div class="lbl">Button size</div><h4>One action size: Regular 14px</h4><p>Large (15.75) and XLarge (19.25) are retired. XSmall (10.5) is allowed only for filter chips and inline toggles, never for a main action.</p></div>
+  <div class="card"><div class="lbl">Back</div><h4>One Back: silver pill, top left</h4><p>It sits in the action row under the header, not beside it. That alone fixes the "offset header" on Invoice, Estimate and Field Crew lists.</p></div>
+  <div class="card"><div class="lbl">Save</div><h4>Save is always a button</h4><p>Where Save is a blue text link (Invoice, Estimate, PO), hide the link and add a black SAVE pill wired to the same Save action. The audit already lists this as the approved fix.</p></div>
+  <div class="card"><div class="lbl">Method blue</div><h4>Never on purpose</h4><p>#0D71C8 stays only where Method draws it and we can't change it: split buttons, grid links, checkboxes and search. Never use it in a control we build.</p></div>
+</div>
+
+<h2>2 · Colour tokens</h2>
+<h3>Brand</h3>
+<div class="sw">
+  <div class="s"><i style="background:#191C16"></i><div><b>Header black</b><span>#191C16</span><em>Brand header, section bands</em></div></div>
+  <div class="s"><i style="background:#7AC043"></i><div><b>Brand rule green</b><span>#7AC043</span><em>Lines only, never fills behind text</em></div></div>
+  <div class="s"><i style="background:#B9C4AE"></i><div><b>Sage</b><span>#B9C4AE</span><em>"PROGRESSIVE WESTMAN" eyebrow</em></div></div>
+  <div class="s"><i style="background:#FDCB2E"></i><div><b>Gold</b><span>#FDCB2E</span><em>Header tag, attention buttons</em></div></div>
+</div>
+<h3>Buttons</h3>
+<div class="sw">
+  <div class="s"><i style="background:#000000"></i><div><b>Primary</b><span>#000000</span><em>Main action, Save</em></div></div>
+  <div class="s"><i style="background:#007B4A"></i><div><b>Create</b><span>#007B4A</span><em>New / Add / Start</em></div></div>
+  <div class="s"><i style="background:#EEF5F7"></i><div><b>Secondary</b><span>#EEF5F7 · #2A394A</span><em>Back, navigation, reports</em></div></div>
+  <div class="s"><i style="background:#545F67"></i><div><b>Utility</b><span>#545F67</span><em>Refresh, print, mode toggles</em></div></div>
+  <div class="s"><i style="background:#FDCB2E"></i><div><b>Attention</b><span>#FDCB2E · black text</span><em>Needs action now</em></div></div>
+</div>
+<h3>Text, surface, status</h3>
+<div class="sw">
+  <div class="s"><i style="background:#0F1B31"></i><div><b>Body text</b><span>#0F1B31</span><em>Method default</em></div></div>
+  <div class="s"><i style="background:#2A394A"></i><div><b>Field labels</b><span>#2A394A</span></div></div>
+  <div class="s"><i style="background:#5F6B57"></i><div><b>Tile labels</b><span>#5F6B57</span></div></div>
+  <div class="s"><i style="background:#D9DED3"></i><div><b>Card border</b><span>#D9DED3</span></div></div>
+  <div class="s"><i style="background:#DA211E"></i><div><b>Status: problem</b><span>#DA211E</span></div></div>
+  <div class="s"><i style="background:#E05D2A"></i><div><b>Status: off target</b><span>#E05D2A</span></div></div>
+</div>
+<h3>Retired</h3>
+<div class="sw">
+  <div class="s x"><i style="background:#FDBC32"></i><div><b>Old header gold</b><span>#FDBC32</span><em>→ #FDCB2E</em></div></div>
+  <div class="s x"><i style="background:#54B435"></i><div><b>Website green</b><span>#54B435</span><em>Not used in Method</em></div></div>
+  <div class="s x"><i style="background:#0D71C8"></i><div><b>Method blue (custom use)</b><span>#0D71C8</span><em>Method chrome only</em></div></div>
+  <div class="s x"><i style="background:#1A1A1A"></i><div><b>Off-black button</b><span>#1A1A1A</span><em>→ #000000</em></div></div>
+</div>
+
+<h2>3 · Type</h2>
+<p class="muted">Method locks the font to Source Sans Pro. We get consistency from size, weight, caps and letter-spacing, not from changing the face. The website's Barlow and Manrope stay on the website.</p>
+<div class="tbl"><table>
+  <thead><tr><th>Role</th><th>Size / weight</th><th>Case &amp; spacing</th><th>Colour</th></tr></thead>
+  <tbody>
+    <tr><td>Header eyebrow</td><td class="n">10px / 600</td><td>CAPS · 1.6px</td><td class="mono">#B9C4AE</td></tr>
+    <tr><td>Header title</td><td class="n">20px / 600</td><td>Title case</td><td class="mono">#FFFFFF</td></tr>
+    <tr><td>Header tag</td><td class="n">10px / 600</td><td>CAPS · 1px</td><td class="mono">#FDCB2E</td></tr>
+    <tr><td>Band caption</td><td class="n">11px / 700</td><td>CAPS · 1.2px</td><td class="mono">#FFFFFF</td></tr>
+    <tr><td>Record title (under header)</td><td class="n">18px / 600</td><td>Title case</td><td class="mono">#0F1B31</td></tr>
+    <tr><td>Buttons</td><td class="n">14px / 600</td><td>CAPS</td><td>by role</td></tr>
+    <tr><td>Tile label</td><td class="n">10px / 700</td><td>CAPS · 1.2px</td><td class="mono">#5F6B57</td></tr>
+    <tr><td>Fields, grids, body</td><td class="n">14px / 400</td><td>Sentence case</td><td class="mono">#0F1B31 · labels #2A394A</td></tr>
+  </tbody>
+</table></div>
+<p class="cap">Retired: Method's 26.25px weight-100 "thin" headings (8 screens, e.g. "Work Order - # 301539 301539"). Set them to Record title or remove the duplicate. KPI's big right-aligned black title also moves into the standard header.</p>
+
+<h2>4 · Components</h2>
+
+<h3>Brand header</h3>
+<p>Full content width, first thing on the screen, on every custom screen. Logo badge left, eyebrow plus title in the middle, gold tag on the right naming the department (BILLING, QUOTES, ROUTES + DELIVERIES).</p>
+<div class="bh"><div class="logo" aria-hidden="true"></div><div class="t"><div class="eb">Progressive Westman</div><div class="ti">Invoices</div></div><div class="tag">Billing</div></div>
+<p class="cap">Use this as the HTML for Method's HTML control. Swap the logo URL for the one already in use on Account Briefing.</p>
+<div class="btns"><button class="copy" type="button" data-copy="snip-header" id="copy-header">Copy header HTML</button></div>
+<pre id="snip-header">&lt;div style="background:#191C16;border-bottom:4px solid #7AC043;padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-family:'Source Sans Pro',sans-serif;"&gt;
+  &lt;img src="LOGO_URL" alt="" style="width:36px;height:36px;border-radius:50%;flex:none;"&gt;
+  &lt;div style="flex:1;min-width:0;"&gt;
+    &lt;div style="color:#B9C4AE;font-size:10px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;"&gt;Progressive Westman&lt;/div&gt;
+    &lt;div style="color:#FFFFFF;font-size:20px;font-weight:600;line-height:1.2;"&gt;SCREEN TITLE&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div style="color:#FDCB2E;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;"&gt;DEPARTMENT&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+<h3>Section band</h3>
+<p>Always full content width. Captions are left-aligned and kept to one line on a phone (about 32 characters). No column-width stubs.</p>
+<div class="band">Customer &amp; site</div>
+<div class="btns" style="margin-top:10px"><button class="copy" type="button" data-copy="snip-band" id="copy-band">Copy band HTML</button></div>
+<pre id="snip-band">&lt;div style="background:#191C16;border-left:4px solid #7AC043;color:#FFFFFF;font-family:'Source Sans Pro',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:8px 12px;"&gt;SECTION NAME&lt;/div&gt;</pre>
+
+<h3>Buttons</h3>
+<div class="spec">
+  <div class="btnrow"><div><span class="b k">Save</span></div><p><b>Primary · black.</b> The one main action on the screen. Rightmost in the action row.</p></div>
+  <div class="btnrow"><div><span class="b g">New invoice</span></div><p><b>Create · green.</b> Anything that starts a new record: New, Add, Start.</p></div>
+  <div class="btnrow"><div><span class="b s">Back</span></div><p><b>Secondary · silver.</b> Back, navigation to related screens, reports, statements.</p></div>
+  <div class="btnrow"><div><span class="b u">Refresh</span></div><p><b>Utility · gunmetal.</b> Refresh, print, Residential/Commercial-style mode toggles.</p></div>
+  <div class="btnrow"><div><span class="b y">Action needed</span></div><p><b>Attention · yellow.</b> Only for "this needs someone now." No more than one or two per screen.</p></div>
+  <div class="btnrow"><div class="btns"><span class="b o xs">Drop ship</span><span class="b s xs">Laundry</span></div><p><b>XSmall chips.</b> Only for filters and inline toggles (Work Order quick views, FOR DELIVERY / FOR PICKUP). Never for a main action.</p></div>
+</div>
+<p class="cap">All buttons: full pill, 14px / 600, CAPS, padding 7px 15px, 0.8px border the same colour as the fill, 8px gap between buttons. Buttons never touch, and that includes Carpet Care Board.</p>
+
+<h3>Action row</h3>
+<p>Directly under the header. BACK on the left, then the actions on the right in this order: secondary, utility, create, primary. On a phone the row wraps and stays left-aligned.</p>
+<div class="mock">
+  <div class="bh"><div class="logo" aria-hidden="true"></div><div class="t"><div class="eb">Progressive Westman</div><div class="ti">Invoice 339387</div></div><div class="tag">Billing</div></div>
+  <div class="actions"><span class="b s">Back</span><span class="sp"></span><span class="b s">Customer statements</span><span class="b u">Print</span><span class="b g">New invoice</span><span class="b k">Save</span></div>
+  <div class="band">Customer &amp; site</div>
+  <div class="tiles">
+    <div class="tile"><div class="l">Balance due</div><div class="v">$5.10</div></div>
+    <div class="tile"><div class="l">Terms</div><div class="v">Net 30</div></div>
+    <div class="tile"><div class="l">Last emailed</div><div class="v">Oct 2</div></div>
+  </div>
+</div>
+<p class="cap">Mock of the Invoice Interface after the fix. Example values come from the audit capture.</p>
+
+<h3>Stat tiles</h3>
+<p>White card, 0.8px #D9DED3 border, 3px #7AC043 top rule, label 10px / 700 CAPS #5F6B57, value 22px / 600. Tiles in a row share one height. No Method icon colours on tiles (this applies to the Jobs app).</p>
+
+<h2>5 · Spacing &amp; screen sizes</h2>
+<p>8px base. 8px between buttons, 16px between header and action row, 24px between sections. Every check below is required at all three sizes before a screen counts as done.</p>
+<div class="vp">
+  <div class="card"><div class="lbl">Desktop</div><div class="w">1280</div><p>Header and bands run full content width. Nothing gets clipped at the right edge (Field Crew REFRESH fails this today). Grid column headers are not truncated.</p></div>
+  <div class="card"><div class="lbl">Tablet</div><div class="w">820</div><p>No field row of more than 3 inputs. Nothing runs under the right-hand activity rail. No blank gaps where a panel hides.</p></div>
+  <div class="card"><div class="lbl">Mobile</div><div class="w">390</div><p>Lists show at most 3 columns (ID, name, amount or status). The header title fits on one line, and the tag can wrap below it. BACK is present. No button label wraps mid-word.</p></div>
+</div>
+
+<h2>6 · Do and don't</h2>
+<div class="dd">
+  <div class="card"><div class="lbl">Do</div><ul>
+    <li>Copy the header and band HTML exactly. Change only the title and tag.</li>
+    <li>Use CAPS on every button we build.</li>
+    <li>Hide a stock control that clashes and add a branded button wired to the same action.</li>
+    <li>Check 1280, 820 and 390 before you save the screen.</li>
+  </ul></div>
+  <div class="card no"><div class="lbl">Don't</div><ul>
+    <li>Use Method blue, #54B435, #FDBC32 or #1A1A1A in anything new.</li>
+    <li>Put a button or pill beside the header. Buttons belong in the action row below it.</li>
+    <li>Mix button sizes in one action row.</li>
+    <li>Centre band captions, or make bands narrower than the content.</li>
+    <li>Change fields, logic, workflows, screen names, or Payments / Sales Receipts.</li>
+  </ul></div>
+</div>
+<p class="cap">Method's own chrome stays as it is: the navy left nav and mobile bar, the blue Save &amp; Back / Batch / Share split buttons, grid links and checkboxes. That's a known ceiling, so don't spend time fighting it.</p>
+
+<h2>7 · Screens to fix, ranked</h2>
+<p class="muted">Ranked by daily use, then by how broken the screen is. Tier 1 is the first batch to do and screenshot for approval.</p>
+<div class="tbl"><table>
+<thead><tr><th>#</th><th>Screen</th><th>Tier</th><th>What changes (looks only)</th></tr></thead>
+<tbody>
+<tr><td class="n">1</td><td>Invoices · Invoice Interface</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. Blue Save link becomes a black SAVE pill. Tablet: split the 7-field row so labels stop overlapping. Mobile: Balance Due no longer clipped.</td></tr>
+<tr><td class="n">2</td><td>Work Orders · Edit Work Order</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. BACK into the action row. Thin 26px title becomes Record title. Tablet: Invoice To and Assigned To kept clear of the activity rail. FOR DELIVERY / PICKUP as XSmall gunmetal chips.</td></tr>
+<tr><td class="n">3</td><td>Work Orders · List</td><td><span class="tier t1">Tier 1</span></td><td>Tablet: remove the ~450px gap left by the hidden Quick Views. REPORTS goes from XSmall to Regular silver. Fewer grid columns at 820.</td></tr>
+<tr><td class="n">4</td><td>Invoices · List</td><td><span class="tier t1">Tier 1</span></td><td>BACK moves under the header, so the header goes full width. Amount and Balance headers no longer truncated. Mobile column set: Invoice #, Customer, Balance.</td></tr>
+<tr><td class="n">5</td><td>Field Crew · Work Order List</td><td><span class="tier t1">Tier 1</span></td><td>BACK under the header. REFRESH no longer clipped at 1280. ALL WORK ORDERS and REFRESH on one row.</td></tr>
+<tr><td class="n">6</td><td>Estimates · Edit Estimate</td><td><span class="tier t1">Tier 1</span></td><td>Header full width. Save link becomes a SAVE pill (fixes "Sav/e" on phone). FEE WAIVERS band goes full width. Tablet Amount column no longer clipped.</td></tr>
+<tr><td class="n">7</td><td>Field Crew · View Work Order</td><td><span class="tier t1">Tier 1</span></td><td>Content uses the full width, not a ~450px column. CUSTOMER &amp; SITE caption left-aligned. Outcome buttons Regular and equal height. <span class="flag">Your login sees a DRAFT. The fix goes into that draft and drivers won't see it until you publish it.</span></td></tr>
+<tr><td class="n">8</td><td>Floor &amp; Carpet · Carpet Job + Carpet Jobs</td><td><span class="tier t2">Tier 2</span></td><td>STEP bands full width. Header full width. Same rail-clipping fix as WO edit. Mobile: BACK present, NEW CARPET JOB in the action row.</td></tr>
+<tr><td class="n">9</td><td>Contacts · List</td><td><span class="tier t2">Tier 2</span></td><td>BACK and SHOW INACTIVE move under the header, which stops it squeezing on the phone. Mobile column set: Name, Main contact, Balance.</td></tr>
+<tr><td class="n">10</td><td>Estimates · List</td><td><span class="tier t2">Tier 2</span></td><td>BACK under the header, header full width. Memo column capped so rows stop growing to 300px. <span class="flag">The "Proposals" header on the Estimates app is a naming question for you. Not changed.</span></td></tr>
+<tr><td class="n">11</td><td>RIM · Home + Current Activities</td><td><span class="tier t2">Tier 2</span></td><td>The logo splash becomes the standard header. XLarge pills go to Regular and the same width in a left-aligned grid. Grey divider becomes a section band.</td></tr>
+<tr><td class="n">12</td><td>KPI · Dashboard</td><td><span class="tier t2">Tier 2</span></td><td>The white letterhead becomes the standard header (tag shows the date). Mobile: drop the fixed ~65px side padding.</td></tr>
+<tr><td class="n">13</td><td>Floor &amp; Carpet · Board</td><td><span class="tier t2">Tier 2</span></td><td>Reference screen. Only change: 8px gap between the nav bars so they stop touching.</td></tr>
+<tr><td class="n">14</td><td>Contacts · Account Briefing</td><td><span class="tier t2">Tier 2</span></td><td>Reference screen. Shorten the one band caption that wraps on the phone.</td></tr>
+<tr><td class="n">15</td><td>Contacts · View Customer</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Mobile: close the dead gap above Portal Link.</td></tr>
+<tr><td class="n">16</td><td>Items · List + Inventory Part</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Untruncate Type / QOH / Price. Blue "Inactivate Selected" becomes a black pill. Mobile column set.</td></tr>
+<tr><td class="n">17</td><td>Purchase Orders · List + Edit</td><td><span class="tier t3">Tier 3</span></td><td>Add the header. Save link becomes a pill. Blue "Add lines" outline becomes a silver pill. Tablet totals box no longer clipped.</td></tr>
+<tr><td class="n">18</td><td>Activities · Home</td><td><span class="tier t3">Tier 3</span></td><td>Add the header if the designer allows it on this new-style app. Mobile BACK.</td></tr>
+<tr><td class="n">19</td><td>Home dashboard + 16 other stock apps</td><td><span class="tier t4">Tier 4</span></td><td>Header only, where the designer allows it: Website Links, Staff Picks, Proposals, Jobs, Send Email, Classes, Accounts, Opportunities, Terms, Sales Reps, Web to Lead, Time Tracking, Sales Orders, Bills, Price Rules, Tax Split, Email Campaigns. Staff Picks and Price Rules: last column clipped on phone.</td></tr>
+<tr><td class="n">—</td><td>Customer Portal Chat</td><td><span class="tier t4">Your call</span></td><td><span class="flag">It's blank at every size. Hiding the tile or fixing it is a functional decision, so it's left for you.</span></td></tr>
+<tr><td class="n">—</td><td>Payments · Sales Receipts</td><td><span class="tier t4">Excluded</span></td><td>Not touched, per your rule.</td></tr>
+</tbody></table></div>
+</main>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var el=document.getElementById(btn.dataset.copy),txt=el.textContent,orig=btn.textContent;
+    function done(m){btn.textContent=m;setTimeout(function(){btn.textContent=orig},1600)}
+    function select(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected, press Ctrl+C')}
+    try{navigator.clipboard.writeText(txt).then(function(){done('Copied')},select)}catch(e){select()}
+  });
+});
+</script>
